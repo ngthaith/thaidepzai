@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Đăng nhập</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 100px; background: #f0f0f0; }
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 1em;
+      width: 80%;
+      max-width: 300px;
+    }
+    button {
+      background: #007acc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Đăng nhập</h2>
+  <input type="password" id="password" placeholder="Nhập mật khẩu" />
+  <br/>
+  <button onclick="login()">Vào</button>
+
+  <script>
+    function login() {
+      const pass = document.getElementById("password").value;
+      if (pass === "123456") {
+        window.location.href = "secret.html"; // chuyển đến trang bí mật
+      } else {
+        alert("Sai mật khẩu rồi bạn ơi!");
+      }
+    }
+  </script>
+</body>
+</html>
