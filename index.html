@@ -1,3 +1,86 @@
-<link rel="stylesheet" href="style.css">
-<script src="msg.js"></script>
-<a href="about.html">About</a>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thái Đẹp Zai | Trang Cá Nhân</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #f7f9fc;
+      color: #333;
+    }
+    header {
+      background: #007acc;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #eee;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      margin: 0 10px;
+      color: #007acc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      background: #007acc;
+      color: white;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #005fa3;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Thái Đẹp Zai</h1>
+    <p>Web cá nhân siêu xịn chạy bằng GitHub Pages 😎</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="about.html">Giới thiệu</a>
+    <a href="contact.html">Liên hệ</a>
+  </nav>
+
+  <main>
+    <h2>Xin chào!</h2>
+    <p>Đây là trang chủ của mình. Mình là Thái đẹp trai 😎 đang học làm web bằng GitHub Pages.</p>
+    <button onclick="showMessage()">Bấm vào tôi</button>
+  </main>
+
+  <footer>
+    © 2025 Thái Đẹp Zai. All rights reserved.
+  </footer>
+
+  <script src="msg.js"></script>
+</body>
+</html>
