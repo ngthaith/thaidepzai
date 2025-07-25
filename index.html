@@ -2,125 +2,109 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SubGiaRe.co - Dịch Vụ Marketing Mạng Xã Hội</title>
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f7f7f7;
+      background: linear-gradient(135deg, #2980b9, #6dd5fa);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    header {
-      background-color: #ffffff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      padding: 15px;
+    .login-box {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-box h2 {
+      margin-bottom: 20px;
       text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
       color: #333;
     }
 
-    .container {
-      padding: 20px;
-      text-align: center;
-    }
-
-    .title {
-      font-size: 20px;
-      font-weight: bold;
-      color: #2c3e50;
-    }
-
-    .desc {
-      margin-top: 10px;
-      font-size: 15px;
-      color: #555;
-    }
-
-    .buttons {
-      margin-top: 20px;
-    }
-
-    .buttons a {
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 8px;
-      margin: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      color: white;
-    }
-
-    .login { background-color: #3b82f6; }
-    .register { background-color: #f59e0b; }
-    .pricing { background-color: #10b981; }
-
-    .features {
-      background-color: white;
-      margin: 20px auto;
-      max-width: 600px;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: left;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-
-    .features h2 {
-      font-size: 18px;
-      margin-bottom: 10px;
-      color: #2c3e50;
-    }
-
-    .features ul {
-      padding-left: 20px;
-    }
-
-    .features li {
+    .login-box input {
+      width: 100%;
+      padding: 12px;
       margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
     }
 
-    .features li::before {
-      content: "→ ";
-      color: #3b82f6;
+    .login-box button {
+      width: 100%;
+      padding: 12px;
+      background: #3498db;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
       font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .login-box button:hover {
+      background: #2980b9;
+    }
+
+    .message {
+      text-align: center;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .message.success {
+      color: green;
+    }
+
+    .message.error {
+      color: red;
     }
   </style>
 </head>
 <body>
-
-<header>
-  <h1>SubGiaRe.co</h1>
-</header>
-
-<div class="container">
-  <div class="title">
-    SubGiaRe.co - Dịch Vụ Marketing Mạng Xã Hội Uy Tín Hàng Đầu Việt Nam
-  </div>
-  <div class="desc">
-    Cung cấp dịch vụ Marketing giúp tăng tương tác: Like, View, Share, Comment, Sub/Follow, Mắt Live...<br>
-    cho Facebook, Instagram, Tiktok, Shopee, Youtube, Telegram, Twitter...<br><br>
-    Với hơn 5 năm kinh nghiệm trong lĩnh vực, SubGiaRe.co cam kết mang đến sự hài lòng cho bạn!
+  <div class="login-box">
+    <h2>Đăng nhập</h2>
+    <form onsubmit="return handleLogin(event)">
+      <input type="text" id="username" placeholder="Tên đăng nhập" required>
+      <input type="password" id="password" placeholder="Mật khẩu" required>
+      <button type="submit">Đăng nhập</button>
+    </form>
+    <div id="message" class="message"></div>
   </div>
 
-  <div class="buttons">
-    <a href="login.html" class="login">Đăng nhập</a>
-    <a href="#" class="register">Đăng ký</a>
-    <a href="#" class="pricing">Bảng giá</a>
-  </div>
-</div>
+  <script>
+    function handleLogin(event) {
+      event.preventDefault();
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+      const msg = document.getElementById("message");
 
-<div class="features">
-  <h2>Tại sao nên chọn SubGiaRe.co?</h2>
-  <ul>
-    <li><strong>An toàn tuyệt đối:</strong> Cam kết an toàn tuyệt đối cho các tài khoản mạng xã hội của bạn!</li>
-    <li><strong>Chi phí hợp lý:</strong> Tương tác có chi phí rẻ, phù hợp cho mọi đối tượng.</li>
-    <li><strong>Tốc độ nhanh:</strong> Từ 10 phút – 24h lượng tương tác đã được tăng đủ với số lượng bạn yêu cầu.</li>
-  </ul>
-</div>
-
+      // Giả lập kiểm tra tài khoản
+      if (user === "admin" && pass === "123456") {
+        msg.innerText = "✅ Đăng nhập thành công!";
+        msg.className = "message success";
+        // Có thể redirect:
+        // window.location.href = "home.html";
+      } else {
+        msg.innerText = "❌ Sai tài khoản hoặc mật khẩu!";
+        msg.className = "message error";
+      }
+    }
+  </script>
 </body>
 </html>
