@@ -1,83 +1,39 @@
-body {
-  font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
   margin: 0;
   padding: 0;
-}
-
-.login-box {
-  background: white;
-  padding: 40px;
-  border-radius: 12px;
-  width: 100%;
-  max-width: 400px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.login-box h2 {
-  margin-bottom: 10px;
-  font-size: 24px;
-}
-
-.signup {
-  margin-bottom: 20px;
-  font-size: 14px;
-}
-
-input[type="text"],
-input[type="password"] {
-  width: 100%;
-  padding: 12px;
-  margin-top: 8px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-.login-btn {
+.header {
+  position: fixed;
   width: 100%;
-  padding: 12px;
-  background-color: #007bff;
-  border: none;
-  border-radius: 6px;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 12px;
-}
-
-.forgot {
-  text-align: right;
-  margin-top: 10px;
-  font-size: 14px;
-}
-
-.forgot a,
-.signup a {
-  text-decoration: none;
-  color: #007bff;
-}
-
-.social-login {
+  height: 60px;
   display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  z-index: 99;
+  background: transparent;
 }
 
-.social-login button {
-  border: none;
-  background: none;
-  cursor: pointer;
+.header .nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 17px;
+  margin-left: 20px;
+  font-weight: 600;
 }
 
-.social-login img {
-  width: 32px;
-  height: 32px;
-}
-
-.message {
-  margin-top: 15px;
-  font-weight: bold;
+.header .search input {
+  background: transparent;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 2px solid white;
+  padding-left: 10px;
+  right: 100px;
+  outline: none;
+  color: #fff;
 }
