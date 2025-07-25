@@ -50,5 +50,25 @@
       }
     }
   </script>
-</body>
+<script>
+  document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    // Lấy giá trị người dùng nhập
+    const username = document.querySelector('input[type="text"]').value;
+    const password = document.querySelector('input[type="password"]').value;
+
+    // Tài khoản mẫu
+    const defaultUser = "admin";
+    const defaultPass = "123456";
+
+    // So sánh
+    if (username === defaultUser && password === defaultPass) {
+      alert("Đăng nhập thành công!");
+      window.location.href = "home.html"; // chuyển trang
+    } else {
+      alert("Sai tài khoản hoặc mật khẩu!");
+    }
+  });
+                                                  </script></body>
 </html>
