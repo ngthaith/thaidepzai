@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Login</title>
+  <title>Đăng nhập</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     * {
@@ -12,7 +12,6 @@
 
     body {
       margin: 0;
-      padding: 0;
       background: linear-gradient(135deg, #2980b9, #6dd5fa);
       height: 100vh;
       display: flex;
@@ -90,16 +89,17 @@
   <script>
     function handleLogin(event) {
       event.preventDefault();
-      const user = document.getElementById("username").value;
-      const pass = document.getElementById("password").value;
+      const user = document.getElementById("username").value.trim();
+      const pass = document.getElementById("password").value.trim();
       const msg = document.getElementById("message");
 
-      // Giả lập kiểm tra tài khoản
       if (user === "admin" && pass === "123456") {
         msg.innerText = "✅ Đăng nhập thành công!";
         msg.className = "message success";
-        // Có thể redirect:
-        // window.location.href = "home.html";
+
+        setTimeout(() => {
+          window.location.href = "home.html";
+        }, 1000);
       } else {
         msg.innerText = "❌ Sai tài khoản hoặc mật khẩu!";
         msg.className = "message error";
